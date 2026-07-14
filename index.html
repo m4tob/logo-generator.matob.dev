@@ -253,8 +253,8 @@
 
   function randomColor() {
     const h = Math.floor(Math.random() * 360);
-    const s = 55 + Math.random() * 20;   // 55–75%
-    const l = 38 + Math.random() * 12;   // 38–50%
+    const s = (Math.random() > 0.1 ? (80 + Math.random() * 20) : (5 + Math.random() * 5)); // 80–100% (9/10) or 5–10% (1/10)
+    const l = 20 + Math.random() * 40;   // 20–50%
     return hslToHex(h, s, l);
   }
 
