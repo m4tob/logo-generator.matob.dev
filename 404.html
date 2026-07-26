@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- This file is what turns off Cloudflare Pages' single-page-application mode:
+     without a top-level 404.html, every unknown path answers 200 with the home page. -->
+<title>Page not found - Logo Generator</title>
+<meta name="robots" content="noindex, follow">
+<meta name="theme-color" content="#f4f5f7">
+<link rel="icon" type="image/png" href="apple-touch-icon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<style>
+  :root {
+    --bg: #f4f5f7;
+    --panel: #ffffff;
+    --ink: #1c2330;
+    --muted: #6b7486;
+    --line: #e2e5ea;
+    --accent: #2a5db0;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; min-height: 100vh; display: flex; align-items: center;
+    justify-content: center; padding: 24px; background: var(--bg); color: var(--ink);
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif; line-height: 1.5;
+  }
+  .card {
+    background: var(--panel); border: 1px solid var(--line); border-radius: 14px;
+    padding: 44px 40px; max-width: 440px; text-align: center;
+  }
+  .mark {
+    width: 64px; height: 64px; border-radius: 14px; background: var(--accent);
+    color: #fff; font-size: 34px; font-weight: 700; display: flex;
+    align-items: center; justify-content: center; margin: 0 auto;
+  }
+  .code { margin: 20px 0 0; font-size: 40px; font-weight: 700; letter-spacing: -1px; }
+  h1 { margin: 4px 0 0; font-size: 19px; font-weight: 600; }
+  p { margin: 12px 0 0; color: var(--muted); font-size: 15px; }
+  a.btn {
+    display: inline-block; margin-top: 26px; padding: 11px 22px; border-radius: 10px;
+    background: var(--accent); color: #fff; text-decoration: none; font-weight: 600;
+    font-size: 15px;
+  }
+  a.btn:hover { background: #244f96; }
+</style>
+</head>
+<body>
+  <main class="card">
+    <div class="mark">L</div>
+    <p class="code">404</p>
+    <h1>This page does not exist</h1>
+    <p>Logo Generator is a single page: the generator itself.</p>
+    <a class="btn" href="/">Make a logo</a>
+  </main>
+</body>
+</html>
