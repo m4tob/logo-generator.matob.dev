@@ -1,0 +1,18 @@
+# Headers applied by Cloudflare Pages to every response from this site.
+# Referrer-Policy and X-Content-Type-Options already come from Cloudflare, so
+# they are not repeated here to avoid sending each header twice.
+#
+# The whole app is inline in index.html and loads nothing from third parties,
+# so the policy can stay on 'self'. The exceptions are all needed:
+#   'unsafe-inline' in script-src -> the app itself and the JSON-LD block are
+#                                    inline; blocking them breaks the page and
+#                                    hides the structured data from Googlebot
+#   'unsafe-inline' in style-src  -> inline <style> blocks
+#   data: in font-src             -> the five fonts are embedded as data URLs
+#   data:/blob: in img-src        -> the canvas preview exports through
+#                                    toDataURL and downloads as a blob
+/*
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'self'; frame-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'none'; object-src 'none'; upgrade-insecure-requests
+  Strict-Transport-Security: max-age=31536000
+  X-Frame-Options: DENY
+  Permissions-Policy: accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=()
